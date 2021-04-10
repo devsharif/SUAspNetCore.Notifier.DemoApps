@@ -25,8 +25,13 @@ namespace SUAspNetCore.Notifier.DemoApps
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Dependency for SUAspNetCore.Notifier
-            services.AddNotifier(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotifierPosition.BottomRight; });
+            // DependencyInjection for SUAspNetCore.Notifier
+            services.AddNotifier(config => 
+            { 
+                config.DurationInSeconds = 10; 
+                config.IsDismissable = true; 
+                config.Position = NotifierPosition.BottomRight; 
+            });
             services.AddControllersWithViews();
         }
 
