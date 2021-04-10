@@ -42,10 +42,10 @@ namespace SUAspNetCore.Notifier.DemoApps.Controllers
                     break;
 
                 default:
-                    _notifier.Success("This is a Success Notification");
-                    _notifier.Info("This is a Info Notification");
-                    _notifier.Warning("This is a Warning Notification");
-                    _notifier.Error("This is a Error Notification");
+                    _notifier.Success("This is a Success Notification", 5);
+                    _notifier.Info("This is a Info Notification", 7);
+                    _notifier.Warning("This is a Warning Notification", 9);
+                    _notifier.Error("This is a Error Notification", 10);
                     break;
             }
 

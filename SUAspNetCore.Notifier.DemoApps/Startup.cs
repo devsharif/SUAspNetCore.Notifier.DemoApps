@@ -28,7 +28,7 @@ namespace SUAspNetCore.Notifier.DemoApps
             // DependencyInjection for SUAspNetCore.Notifier
             services.AddNotifier(config => 
             { 
-                config.DurationInSeconds = 10; 
+                config.DurationInSeconds = 5; 
                 config.IsDismissable = true; 
                 config.Position = NotifierPosition.BottomRight; 
             });
