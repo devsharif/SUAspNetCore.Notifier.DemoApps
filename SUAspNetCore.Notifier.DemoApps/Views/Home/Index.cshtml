@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SUAspNetCore.Notifier</h1>
+    <h4>Toast Notification Demo</h4>
+    <p>This Sample project is for easy implementation of ASP.NET Core Toast Notifications for Server-side Implementation. This is Fully Compatilble with ASP.NET Core 3.1 and .NET 5.</p>
+</div>
+
+<div class="text-center">
+    <div class="">
+        <h6>Click a button below to see demo</h6>
+        <a class="btn btn-success" asp-action="Notifier" asp-controller="Home" asp-route-type="success">Success</a>
+        <a class="btn btn-info" asp-action="Notifier" asp-controller="Home" asp-route-type="info">Info</a>
+        <a class="btn btn-warning" asp-action="Notifier" asp-controller="Home" asp-route-type="warning">Warning</a>
+        <a class="btn btn-danger" asp-action="Notifier" asp-controller="Home" asp-route-type="error">Error</a>
+    </div>
+    <div class="mt-2">
+        <a class="btn btn-secondary" asp-action="Notifier" asp-controller="Home" asp-route-type="multiple">Multiple Notification</a>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    Demo Source Code: <a href="https://github.com/devsharif/SUAspNetCore.Notifier.DemoApps" target="_blank">https://github.com/devsharif/SUAspNetCore.Notifier.DemoApps</a><br />
+    Developer Profile: <a href="https://github.com/devsharif" target="_blank">@@devsharif</a>
+</div>
