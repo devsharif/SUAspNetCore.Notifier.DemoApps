@@ -13,7 +13,7 @@ namespace SUAspNetCore.Notifier.DemoApps.Controllers
     public class HomeController : Controller
     {
         // Dependency for SUAspNetCore.Notifier
-        public INotifierService _notifier { get; }
+        private readonly INotifierService _notifier;
         public HomeController(INotifierService notifier)
         {
             _notifier = notifier;

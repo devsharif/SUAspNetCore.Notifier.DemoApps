@@ -63,7 +63,7 @@ Usually you will place this code below all scripts and above the  **@await Rende
 Now include code below for Constructor Injection. Add the following code to controllers / razor classes where required.
 
 ```
-public INotifierService _notifier { get; }
+private readonly INotifierService _notifier;
 public HomeController(INotifierService notifier)
 {
     _notifier = notifier;
