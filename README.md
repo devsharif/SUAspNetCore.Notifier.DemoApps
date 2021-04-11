@@ -98,7 +98,7 @@ _notifier.Error("This is an Error Notification");
 ### Set Toast Duration
 By default, the toast gets dismissed in 5 seconds. You can set the duration(in seconds) which will be the duration of toast notification.
 ```csharp
-_notifyService.Success("This Notification duration is 10 sec.", 10);
+_notifier.Success("This Notification duration is 10 sec.", 10);
 ```
 
 # New Feature
