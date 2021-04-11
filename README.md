@@ -7,20 +7,20 @@ This is Fully Compatilble with ASP.NET Core 3.1 and .NET 5 Web Application.
 
 By Nuget Package Manager>Package manager Console
 ```
-Install-Package SUAspNetCore.Notifier
+Install-Package SU.AspNetCore.Notifier
 ```
 Or
 
 By dotnet CLI
 ```
-dotnet add package SUAspNetCore.Notifier
+dotnet add package SU.AspNetCore.Notifier
 ```
 Or 
 
 By using Visual Studio Nuget Package Manager and Search for
 
 ```
-SUAspNetCore.Notifier
+SU.AspNetCore.Notifier
 ```
 
 
@@ -42,7 +42,7 @@ services.AddNotifier(config =>
 | -------------     |:------:|-------------|
 | DurationInSeconds | Numeric| Example 10, 20, 100 etc for defined in second |
 | IsDismissable     | Boolean| true for close option, false for none       |
-| Position          | Object | Notification Posion (TopRight, BottomRight, BottomLeft, TopLeft, TopCenter, BottomCenter)|
+| Position          | Object | Notifier Posion (TopRight, BottomRight, BottomLeft, TopLeft, TopCenter, BottomCenter)|
 
 ## 3. Add the Middleware
 Add the following line to the Configure method.
@@ -77,9 +77,9 @@ Once the Injection is done, you can call the toast notification as. Currently 4 
 _notifier.Success("This is a Success Notification");
 ```
 
-### Error
+### Info
 ```csharp
-_notifier.Error("This is an Error Notification");
+_notifier.Info("This is an Info Notification");
 ```
 
 ### Warning
@@ -87,10 +87,14 @@ _notifier.Error("This is an Error Notification");
 _notifier.Warning("This is a Warning Notification");
 ```
 
-### Info
+### Error
 ```csharp
-_notifier.Info("This is an Info Notification");
+_notifier.Error("This is an Error Notification");
 ```
+
+
+
+
 ### Set Toast Duration
 By default, the toast gets dismissed in 5 seconds. You can set the duration(in seconds) which will be the duration of toast notification.
 ```csharp

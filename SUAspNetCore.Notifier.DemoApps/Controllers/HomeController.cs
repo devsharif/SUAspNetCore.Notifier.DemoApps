@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SUAspNetCore.Notifier.DemoApps.Models;
-using SUAspNetCore.Notifier.Services;
+using SU.AspNetCore.Notifier.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,47 +42,13 @@ namespace SUAspNetCore.Notifier.DemoApps.Controllers
                     break;
 
                 default:
-                    _notifier.Success("This is a Success Notification", 5);
-                    _notifier.Info("This is a Info Notification", 7);
-                    _notifier.Warning("This is a Warning Notification", 9);
-                    _notifier.Error("This is a Error Notification", 10);
+                    _notifier.Success("This is a Success Notification", 3);
+                    _notifier.Info("This is a Info Notification", 4);
+                    _notifier.Warning("This is a Warning Notification", 6);
+                    _notifier.Error("This is a Error Notification", 7);
                     break;
             }
 
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public IActionResult Success()
-        {
-            _notifier.Success("This is a Success Notification");
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public IActionResult Info()
-        {
-            _notifier.Info("This is a Info Notification");
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public IActionResult Warning()
-        {
-            _notifier.Warning("This is a Warning Notification");
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public IActionResult Error()
-        {
-            _notifier.Error("This is a Error Notification");
-            return RedirectToAction("Index");
-        }
-        [HttpPost]
-        public IActionResult All()
-        {
-            _notifier.Success("This is a Success Notification");
-            _notifier.Info("This is a Info Notification");
-            _notifier.Warning("This is a Warning Notification");
-            _notifier.Error("This is a Error Notification");
             return RedirectToAction("Index");
         }
 
